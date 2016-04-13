@@ -15,6 +15,8 @@ module ActionView
 
     module FormOptionsHelper
       def country_select(object, method, options = {}, html_options = {})
+        puts "$" * 50
+        puts options[:object]
         CountrySelect.new(object, method, self, options.delete(:object)).render(options, html_options)
       end
     end
