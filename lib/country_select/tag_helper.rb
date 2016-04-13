@@ -14,6 +14,8 @@ module CountrySelect
         option_tags += html_safe_newline + options_for_select([priority_countries_divider], disabled: priority_countries_divider)
 
         if priority_countries.include?(option_tags_options[:selected])
+          puts "*" * 50
+          puts option_tags_options
           option_tags_options[:selected] = nil
         end
 
